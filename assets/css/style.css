@@ -32,20 +32,17 @@ body {
     font-size: 20px;
 }
 
-.header div ul {
-    list-style-type: none;
-}
-
+/* consolidated ".header div ul li" with ".header div ul" to eliminate redundancies.
+attempted to put "a" in the same section but that turned the text purple from white */
 .header div ul li {
     display: inline-block;
     margin-left: 25px;
+    list-style-type: none;
 }
-
 a {
     color: #ffffff;
     text-decoration: none;
 }
-
 p {
     font-size: 16px;
 }
@@ -59,22 +56,47 @@ p {
     background-position: center;
 }
 
-.float-left {
-    float: left;
-    margin-right: 25px;
-}
-
-.float-right {
-    float: right;
-    margin-left: 25px;
-}
-
 .content {
     width: 75%;
     display: inline-block;
     margin-left: 20px;
 }
+/* consolidated 3 classes "search-engine-optimization", "online-reputation-management"
+and "social-media-marketing", which all had identical parameters into one class
+of "box" and moved their coding up towards the content section for organizationpurposes */
+.content .box {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+/* consolidated all h2's in the content section. added top margin for aesthetic
+of text within the box */
+.content h2{
+    margin-bottom: 20px;
+    font-size: 36px;
+    margin-top: 50px;
+}
+/* consolidated 3 separate classes of images images within content that all
+had identical parameters into one class. Also moved the CSS for these images
+up towards the ".content" class for organization purposes */
+.content img{
+    max-height: 200px;
+}
 
+.float-left{
+    float: left;
+    margin-right: 25px;
+}
+.float-right{
+    float: right;
+    margin-right: 25px;
+}
+/*removed different classes of "benefit-lead" "benefit-awareness"
+and "benefit management" into the benefit section to trim down css and
+html  */
 .benefits {
     margin-right: 20px;
     padding: 20px;
@@ -84,108 +106,21 @@ p {
     height: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #2589bd;
-}
-
-.benefit-lead {
     margin-bottom: 32px;
     color: #ffffff;
+    align-items: justify content;
 }
-
-.benefit-brand {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-cost {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-lead h3 {
-    margin-bottom: 10px;
+/* consolidated all benefit subsections h3's into one class.
+    changed "margin-bottom: 10px;" to "margin: 10 px;" */
+.benefits h3 {
+    margin: 10px;
     text-align: center;
 }
-
-.benefit-brand h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-cost h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-lead img {
+/* consolidated all img subclasses within benefits class into one class */
+.benefits img {
     display: block;
     margin: 10px auto;
     max-width: 150px;
-}
-
-.benefit-brand img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.benefit-cost img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.search-engine-optimization {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.online-reputation-management {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.search-engine-optimization img {
-    max-height: 200px;
-}
-
-.online-reputation-management img {
-    max-height: 200px;
-}
-
-.social-media-marketing img {
-    max-height: 200px;
-}
-
-.search-engine-optimization h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.online-reputation-management h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
 }
 
 .footer {
