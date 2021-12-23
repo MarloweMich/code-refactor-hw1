@@ -84,6 +84,7 @@ had identical parameters into one class. Also moved the CSS for these images
 up towards the ".content" class for organization purposes */
 .content img{
     max-height: 200px;
+    max-width: 400px;
 }
 
 .float-left{
